@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "DM Sans Variable", system-ui, sans-serif;
+  --color-ink: #f5f5f7;
+  --color-muted: #86868b;
+  --color-surface: #111113;
+  --color-surface-elevated: #1c1c1e;
+  --color-accent: #ffd60a;
+  --color-accent-soft: rgba(255, 214, 10, 0.12);
+  --color-glow: rgba(255, 214, 10, 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-[var(--color-ink)] antialiased;
+    font-family: var(--font-body);
+  }
+
+  ::selection {
+    background: rgba(255, 214, 10, 0.35);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hero-gradient {
+    background:
+      radial-gradient(ellipse 80% 50% at 70% -10%, rgba(255, 214, 10, 0.14), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 10% 20%, rgba(100, 149, 237, 0.08), transparent 50%),
+      radial-gradient(ellipse 50% 30% at 90% 80%, rgba(255, 255, 255, 0.04), transparent 45%);
+  }
+
+  .section-label {
+    @apply text-[11px] font-medium uppercase tracking-[0.22em] text-[var(--color-muted)];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
