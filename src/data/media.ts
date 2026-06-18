@@ -1,41 +1,57 @@
-export const LOOM_EMBED_URL =
-  'https://www.loom.com/embed/906b52ffea37494e9f732124b74c63f3'
+export const OVERVIEW_VIDEO_EMBED_URL = 'https://www.youtube.com/embed/RFfdPP7tlyk'
 
 export const sampleClips = [
   {
-    id: 'healthcare-fraud',
-    title: 'Healthcare fraud',
-    subtitle: 'Insurance companies',
-    src: '/clips/healthcare-fraud.mp4',
-  },
-  {
-    id: 'war-threat',
-    title: 'War & leadership',
-    subtitle: 'National security',
-    src: '/clips/war-threat-leadership.mp4',
-  },
-  {
-    id: 'infrastructure-bank',
-    title: '$5T infrastructure bank',
-    subtitle: 'Congress bill',
-    src: '/clips/infrastructure-bank.mp4',
-  },
-  {
     id: 'america-founding',
-    title: "America's founding",
-    subtitle: '250 years of history',
-    src: '/clips/america-founding.mp4',
+    title: "America's Founding",
+    subtitle: 'Fundraiser Speech',
+    youtubeId: 'iOqENhOamnc',
+  },
+  {
+    id: 'china-growth',
+    title: "China's Growth",
+    subtitle: 'Fundraiser Speech',
+    youtubeId: '9N0dSJ-tG3E',
+  },
+  {
+    id: 'national-bank',
+    title: 'National Bank',
+    subtitle: 'Debate',
+    youtubeId: 'YaHccoI7_Vg',
+  },
+  {
+    id: 'healthcare-fraud',
+    title: 'Healthcare Fraud',
+    subtitle: 'Debate',
+    youtubeId: 'nYh9jar8en0',
   },
   {
     id: 'lucero',
-    title: 'Lucero for Congress',
-    subtitle: 'Campaign clip',
-    src: '/clips/lucero-guiding-star.mp4',
+    title: 'Lucero For Congress',
+    subtitle: 'Stump Speech',
+    youtubeId: '0UJ7s_af_ww',
   },
   {
-    id: 'china-transformation',
-    title: "China's growth",
-    subtitle: 'Infrastructure & EVs',
-    src: '/clips/china-transformation.mp4',
+    id: 'war-leadership',
+    title: 'War & Leadership',
+    subtitle: 'Stump Speech',
+    youtubeId: 'ijsLhLNui9M',
   },
 ] as const
+
+export function youtubeEmbedUrl(youtubeId: string, autoplay = false) {
+  const params = new URLSearchParams({
+    rel: '0',
+    modestbranding: '1',
+  })
+
+  if (autoplay) {
+    params.set('autoplay', '1')
+  }
+
+  return `https://www.youtube.com/embed/${youtubeId}?${params.toString()}`
+}
+
+export function youtubeThumbnailUrl(youtubeId: string) {
+  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
+}

@@ -6,7 +6,7 @@ import { LoomEmbed } from './LoomEmbed'
 
 import { PatrioticBarThin, patriotStepColor } from './PatrioticMotifs'
 
-import { LOOM_EMBED_URL } from '../data/media'
+import { OVERVIEW_VIDEO_EMBED_URL } from '../data/media'
 
 
 
@@ -168,7 +168,7 @@ export function HowItWorks() {
 
             >
 
-              <LoomEmbed src={LOOM_EMBED_URL} title="How Speech 2 Clips works" />
+              <LoomEmbed src={OVERVIEW_VIDEO_EMBED_URL} title="Speech 2 Clips overview" />
 
             </BorderBeam>
 
