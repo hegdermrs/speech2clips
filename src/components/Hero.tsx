@@ -92,9 +92,9 @@ export function Hero() {
                 borderRadius={28}
               >
                 <div className="relative overflow-hidden rounded-[28px]">
-                  <CantonAccent className="left-0 top-0 h-20 w-28 md:h-24 md:w-32" />
+                  <CantonAccent className="right-0 top-0 h-20 w-28 rounded-bl-[100px] rounded-br-none md:h-24 md:w-32" />
                   <div className="glass rounded-[28px] p-8 md:p-9">
-                    <p className="section-label mb-4 pl-24 md:pl-28">The final stretch</p>
+                    <p className="section-label mb-4">The final stretch</p>
                     <p className="text-balance text-2xl leading-snug text-white md:text-[1.65rem]">
                       Speeches, debates, forums — you&apos;re showing up, but your
                       team is drowning trying to turn every moment into content.

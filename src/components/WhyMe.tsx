@@ -38,10 +38,10 @@ export function WhyMe() {
           </h2>
         </FadeIn>
 
-        <div className="mt-16 columns-1 gap-5 space-y-5 md:columns-2">
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
           {reasons.map((reason, index) => (
-            <FadeIn key={reason.title} delay={index * 0.08}>
-              <article className="break-inside-avoid glass rounded-[20px] p-7">
+            <FadeIn key={reason.title} delay={index * 0.08} className="h-full">
+              <article className="glass h-full rounded-[20px] p-7">
                 <reason.icon className={cn('h-5 w-5', patriotIconColor(index))} />
                 <h3 className="mt-5 text-xl font-medium text-white">{reason.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">

@@ -6,5 +6,6 @@ export const SITE = {
   social: {
     instagram: 'https://www.instagram.com/sarzoza',
     youtube: 'https://www.youtube.com/sammysarzoza',
+    linkedin: 'https://www.linkedin.com/in/sarzoza',
   },
 } as const
